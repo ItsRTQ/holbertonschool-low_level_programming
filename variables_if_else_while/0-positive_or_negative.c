@@ -5,22 +5,18 @@
  * Description - check is the number entered is a positivive or negative
  * Return: Thhe fuction return 0 when it finish, letting know it has finish
  */
-int checker(int n)
+if (n >= 0)
 {
-	if (n >= 0)
+	if (n == 0)
 	{
-		if (n == 0)
-		{
-			printf("%d is zero", n);
-		}
-		else
-		{
-			printf("%d is positive", n);
-		}
+		printf("%d is zero", n);
 	}
 	else
 	{
-		printf("%d is negative", n);
+		printf("%d is positive", n);
 	}
-	return (0);
+}
+else
+{
+	printf("%d is negative", n);
 }
