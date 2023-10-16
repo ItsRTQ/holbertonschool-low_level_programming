@@ -4,7 +4,7 @@
  * Description - prints the abc, without q or e
  * Return: 0 if the fuction finish correctly
  */
-int main(void);
+int main(void)
 {
 	int ch;
 
