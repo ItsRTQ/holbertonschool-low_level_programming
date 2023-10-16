@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-	char alphabet;
-	alphabet = "abcdefghijklmnopqrstuvwxyz";
-	putchar(ch);
+	int ch;
+	for(ch = 'a'; ch <= 'z'; ch++)
+		putchar(ch);
 	return (0);
 }
