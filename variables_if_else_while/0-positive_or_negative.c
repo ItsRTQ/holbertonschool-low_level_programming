@@ -1,22 +1,30 @@
-#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 /**
- * main - main function starts the code
- *
- * Description - check is the number entered is a positivive or negative
- * Return: Thhe fuction return 0 when it finish, letting know it has finish
+ * main - starts the program
+ * Description - checks if n is positive or negative
+ * Return: 0 if the main finish correctly
  */
-if (n >= 0)
+int main(void)
 {
-	if (n == 0)
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (n >= 0)
 	{
-		printf("%d is zero", n);
+		if (n == 0)
+		{
+			printf("%d is zero", n);
+		}
+		else
+		{
+			printf("%d is a positive", n);
+		}
 	}
 	else
 	{
-		printf("%d is positive", n);
+		printf("%d is a negative", n);
 	}
-}
-else
-{
-	printf("%d is negative", n);
+	return (0);
 }
