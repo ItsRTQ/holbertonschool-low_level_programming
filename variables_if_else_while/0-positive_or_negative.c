@@ -5,7 +5,7 @@
  * Description - check is the number entered is a positivive or negative
  * Return: Thhe fuction return 0 when it finish, letting know it has finish
  */
-int main(void)
+int checker(int n)
 {
 	if (n >= 0)
 	{
