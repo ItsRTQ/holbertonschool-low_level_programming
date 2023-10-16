@@ -10,7 +10,7 @@ int main(void)
 
 	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		if (ch != 'q' || 'e')
+		if (ch != 113 || 101)
 		{
 			putchar(ch);
 		}
