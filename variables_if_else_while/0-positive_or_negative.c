@@ -5,13 +5,13 @@
  * Description - the main funciton check is the number entered is a positivive or negative
  * Return: Thhe fuction return 0 when it finish, letting know it has finish
  */
-int main(void)
+int main(n)
 {
 	if(n >= 0)
 	{
 		if(n == 0)
 		{
-			puts("%d is zero", n);
+			printf("%d is zero", n);
 		}
 		else
 		{
