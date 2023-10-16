@@ -2,14 +2,14 @@
 /**
  * main - main function starts the code
  *
- * Description - the main funciton check is the number entered is a positivive or negative
+ * Description - check is the number entered is a positivive or negative
  * Return: Thhe fuction return 0 when it finish, letting know it has finish
  */
-int main(int n)
+int main(void)
 {
-	if(n >= 0)
+	if (n >= 0)
 	{
-		if(n == 0)
+		if (n == 0)
 		{
 			printf("%d is zero", n);
 		}
