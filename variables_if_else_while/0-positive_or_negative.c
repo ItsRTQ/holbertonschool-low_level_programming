@@ -20,12 +20,12 @@ int main(void)
 		}
 		else
 		{
-			printf("%d is a positive\n", n);
+			printf("%d is positive\n", n);
 		}
 	}
 	else
 	{
-		printf("%d is a negative\n", n);
+		printf("%d is negative\n", n);
 	}
 	return (0);
 }
