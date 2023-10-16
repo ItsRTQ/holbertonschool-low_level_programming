@@ -5,7 +5,7 @@
  * Description - the main funciton check is the number entered is a positivive or negative
  * Return: Thhe fuction return 0 when it finish, letting know it has finish
  */
-int main(n)
+int main(int n)
 {
 	if(n >= 0)
 	{
