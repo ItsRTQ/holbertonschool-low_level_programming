@@ -11,11 +11,11 @@ int main(void)
 	{
 		if(n == 0)
 		{
-			puts("%d is zero", n)
+			puts("%d is zero", n);
 		}
 		else
 		{
-			printf("%d is positive", n)
+			printf("%d is positive", n);
 		}
 	}
 	else
