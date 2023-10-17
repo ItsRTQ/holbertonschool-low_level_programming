@@ -4,7 +4,7 @@
  * Description - prints the alphabet using _putchar
  * Return: is void it doesn't return
  */
-void print_alphabet(void);
+void print_alphabet(void)
 {
 	int ch;
 
