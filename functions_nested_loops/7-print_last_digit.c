@@ -11,6 +11,10 @@ int print_last_digit(int n)
 	{
 		n = (n * -1);
 	}
+	if (n == -2147483647 - 1)
+	{
+		n = 8;
+	}
 	n = (n % 10);
 	_putchar('0' + n);
 	return (n);
