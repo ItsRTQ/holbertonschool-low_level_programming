@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
  * print_alphabet_x10 - prints de abc's
@@ -12,7 +11,7 @@ void print_alphabet_x10(void)
 
 	for (rep = 0; rep < 10; rep++)
 	{
-		for (ch = 97; ch <= 122; ch++)
+		for (ch = 'a'; ch <= 'z'; ch++)
 		{
 			_putchar(ch);
 		}
