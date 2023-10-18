@@ -10,11 +10,17 @@ void times_table(void)
 	int tabla;
 	int por;
 	int firstInt;
+	int comma;
 
 	for (por = 0; por <= 9; por++)
 	{
 		for (tabla = 0; tabla <= 9; tabla++)
 		{
+			comma = 44;
+			if (tabla == 9)
+			{
+				comma = 0;
+			}
 			total = (por * tabla);
 			if (total > 9)
 			{
@@ -23,20 +29,19 @@ void times_table(void)
 				_putchar(' ');
 				_putchar('0' + firstInt);
 				_putchar('0' + total);
-				_putchar(',');
+				_putchar(comma);
 			}
 			else if (tabla == 0)
 			{
 				_putchar('0' + total);
-				_putchar(',');
-				_putchar(' ');
+				_putchar(comma);
 			}
 			else
 			{
 				_putchar(' ');
-				_putchar('0' + total);
-				_putchar(',');
 				_putchar(' ');
+				_putchar('0' + total);
+				_putchar(comma);
 			}
 		}
 		_putchar('\n');
