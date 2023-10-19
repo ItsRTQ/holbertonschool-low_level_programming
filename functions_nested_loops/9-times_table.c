@@ -19,14 +19,13 @@ void times_table(void)
 			comma = 44;
 			if (tabla == 9)
 			{
-				comma = 0;
+				comma = 10;
 			}
 			total = (por * tabla);
 			if (total > 9)
 			{
 				firstInt = (total / 10);
 				total = (total % 10);
-				_putchar(' ');
 				_putchar('0' + firstInt);
 				_putchar('0' + total);
 				_putchar(comma);
@@ -43,6 +42,5 @@ void times_table(void)
 				_putchar(comma);
 			}
 		}
-		_putchar('\n');
 	}
 }
