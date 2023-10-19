@@ -26,6 +26,7 @@ void times_table(void)
 			{
 				firstInt = (total / 10);
 				total = (total % 10);
+				_putchar(' ');
 				_putchar('0' + firstInt);
 				_putchar('0' + total);
 				_putchar(comma);
@@ -37,6 +38,7 @@ void times_table(void)
 			}
 			else
 			{
+				_putchar(' ');
 				_putchar(' ');
 				_putchar('0' + total);
 				_putchar(comma);
