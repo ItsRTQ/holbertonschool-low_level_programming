@@ -43,6 +43,10 @@ void print_to_98(int n)
 			}
 		}
 	}
+	else
+	{
+		printer(n);
+	}
 }
 /**
  * printer - uses the _putchar to print
