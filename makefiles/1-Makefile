@@ -1,4 +1,5 @@
-SRC:= main.c school.c
 CC:= gcc
-all: $(SRC)
-	gcc $(SRC) -o school
+SRC:= main.c school.c
+all: 
+	touch school
+	chmod a+x school
