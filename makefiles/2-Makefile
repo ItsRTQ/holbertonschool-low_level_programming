@@ -4,5 +4,5 @@ OBJ = *.o
 NAME = school
 
 all:
-	rm -f \$(NAME)
-	$(CC) -o $(NAME) $(SRC)
+	rm -f \$(NAME) $(OBJ)
+	$(CC) -MMD -o $(NAME) $(SRC)
