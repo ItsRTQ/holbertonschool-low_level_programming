@@ -1,6 +1,8 @@
 CC := gcc
-COMPILER := $(CC)
 SRC := main.c school.c
+EXECUTABLE := school
 
-all: 
-	$(COMPILER) -o school $(SRC)
+all: $(EXECUTABLE)
+
+$(EXECUTABLE): $(SRC)
+	$(CC) -o $@ $^
