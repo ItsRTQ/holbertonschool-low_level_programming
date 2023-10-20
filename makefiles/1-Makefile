@@ -1,5 +1,4 @@
-CC:= gcc
 SRC:= main.c school.c
+CC:= gcc
 all:
-	@echo "Makes executable file, name: school"
 	$(CC) $(SRC) -o school
