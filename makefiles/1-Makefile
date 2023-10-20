@@ -1,5 +1,6 @@
-CC:= gcc
-comp:= $(CC)
-SRC:= main.c school.c
-all:
-	$(comp) -o school $(SRC)
+CC := gcc
+COMPILER := $(CC)
+SRC := main.c school.c
+
+all: 
+	$(COMPILER) -o school $(SRC)
