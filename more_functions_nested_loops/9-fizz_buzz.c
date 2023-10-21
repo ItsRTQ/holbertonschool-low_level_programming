@@ -2,9 +2,9 @@
 /**
 * main - it starts the program
 * Description - prints fizz, buzz, or fizzbuzz depending on the number
-* Return: void, doesnt return
+* Return: 0 if the function finishes succesfully
 */
-void main(void)
+int main(void)
 {
 	int counter;
 
@@ -28,4 +28,5 @@ void main(void)
 		}
 	}
 	putchar('\n');
+	return (0);
 }
