@@ -1,7 +1,7 @@
 #include "main.h"
 /**
-* function - it starts the program
-* Description - prints numbers 0-9
+* print_numbers - it starts the program
+* Description - prints numbers 0-9 and then make a new line
 * Return: void, doesnt return
 */
 void print_numbers(void)
