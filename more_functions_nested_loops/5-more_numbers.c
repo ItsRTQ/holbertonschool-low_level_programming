@@ -18,7 +18,6 @@ void more_numbers(void)
 			{
 				firstInt = (a / 10);
 				_putchar('0' + firstInt);
-				printVal = (a % 10);
 			}
 			_putchar('0' + (a % 10));
 		}
