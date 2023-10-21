@@ -1,11 +1,11 @@
 CC = gcc
 SRC = main.c school.c
-OBJ = *.o
+OBJ = $(SRC:.c=.o)
 NAME = school
 
 all: outFiles
 	$(CC) $(OBJ) -o $(NAME)
 
 outFiles:
-	$(CC) $(word 1, $(SRC)) -o main.o
-	$(CC) $(word 2, $(SRC)) -o school.o
+	$(CC) $(word 1, $(SRC)) -o $(word 1,$(OBJ))
+	$(CC) $(word 2, $(SRC)) -o $(word 2,$(OBJ))
