@@ -12,19 +12,19 @@ int main(void)
 	{
 		if (counter % 3 == 0 && counter % 5 == 0)
 		{
-			printf("FizzBuzz ");
+			printf(" FizzBuzz");
 		}
 		else if (counter % 3 == 0)
 		{
-			printf("Fizz ");
+			printf(" Fizz");
 		}
 		else if (counter % 5 == 0)
 		{
-			printf("Buzz ");
+			printf(" Buzz");
 		}
 		else
 		{
-			printf("%d ", counter);
+			printf(" %d", counter);
 		}
 	}
 	putchar('\n');
