@@ -14,7 +14,6 @@ void more_numbers(void)
 	{
 		for (a = 0; a <= 14; a++)
 		{
-			printVal = a;
 			if (a > 9)
 			{
 				firstInt = (a / 10);
