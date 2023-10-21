@@ -9,7 +9,6 @@ void more_numbers(void)
 	int a;
 	int b;
 	int firstInt;
-	int printVal;
 
 	for (b = 0; b <= 10; b++)
 	{
