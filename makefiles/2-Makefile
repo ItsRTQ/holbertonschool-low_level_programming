@@ -7,5 +7,4 @@ all: outFiles
 	$(CC) $(OBJ) -o $(NAME)
 
 outFiles:
-	$(CC) -c $(word 1, $(SRC))
-	$(CC) -c $(word 2, $(SRC))
+	$(CC) -c $(SRC)
