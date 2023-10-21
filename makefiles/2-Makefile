@@ -3,7 +3,9 @@ SRC = main.c school.c
 OBJ = *.o
 NAME = school
 
-all: $(NAME)
+all: outFiles
+	$(CC) $(OBJ) -o $(NAME)
 
-$(NAME): $(SRC)
-	$(CC) -MMD $(SRC) -o $(NAME)
+outFiles:
+	$(CC) main.c -o main.o
+	$(CC) school.c -o school.o
