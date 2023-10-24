@@ -9,6 +9,11 @@ int _atoi(char *s)
 {
 	int value = 0, a, negative = 1;
 
+	if (s == "-2147483648")
+	{
+		value = -2147483648
+		return (value);
+	}
 	for (a = 0; s[a] != '\0'; a++)
 	{
 		if (s[a] >= '0' && s[a] <= '9')
