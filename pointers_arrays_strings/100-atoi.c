@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 /**
 * _atoi - it starts the program
 * @s: recive a value
@@ -13,6 +14,10 @@ int _atoi(char *s)
 	{
 		if (s[a] >= '0' && s[a] <= '9')
 		{
+			if (value < INT_MIN)
+			{
+				return (INT_MIN);
+			}
 			if (s[a - 1] == '-')
 			{
 				negative = -1;
