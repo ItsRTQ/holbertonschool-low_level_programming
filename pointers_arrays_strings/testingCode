@@ -1,0 +1,11 @@
+#include "main.h"
+#include <stdio.h>
+
+void main(void)
+{
+	char *s = "hello";
+	int Size;
+	Size = _strlen(s);
+
+	printf("%d\n", Size);
+}
