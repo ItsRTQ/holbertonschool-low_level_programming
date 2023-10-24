@@ -1,5 +1,4 @@
 #include "main.h"
-#include "2-strlen.c"
 /**
 * *_strncpy - it starts the program
 * @dest: recive a value
