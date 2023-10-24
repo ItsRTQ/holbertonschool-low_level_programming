@@ -16,7 +16,7 @@ int _atoi(char *s)
 		{
 			if (value * 10 + (s[a] - '0') < INT_MIN)
 			{
-				return (INT_MIN);
+				return (INT_MAX * -1);
 			}
 			if (s[a - 1] == '-')
 			{
