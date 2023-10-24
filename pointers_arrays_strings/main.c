@@ -1,17 +1,22 @@
+#include "main.h"
 #include <stdio.h>
 
-int _atoi(char *);
-
 /**
- * main - check the code for Holberton School students.
+ * main - check the code
  *
  * Return: Always 0.
  */
 int main(void)
 {
-	int n;
+    char s1[98] = "Hello ";
+    char s2[] = "World!\n";
+    char *ptr;
 
-	n = _atoi("+++++    +-+    2242454");
-	printf("%d\n", n);
-	return (0);
+    printf("%s\n", s1);
+    printf("%s", s2);
+    ptr = _strcat(s1, s2);
+    printf("%s", s1);
+    printf("%s", s2);
+    printf("%s", ptr);
+    return (0);
 }
