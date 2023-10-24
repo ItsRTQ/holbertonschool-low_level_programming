@@ -4,7 +4,7 @@
 * *_strcpy - it starts the program
 * @dest: recive a value
 * @src: second value
-* Description - mimics the function strcpy
+* Description - mimics the function builtin function that lets you copy strings
 * Return: a copy of the src string inside dest
 */
 char *_strcpy(char *dest, char *src)
