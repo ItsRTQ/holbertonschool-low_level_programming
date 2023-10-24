@@ -18,9 +18,12 @@ char *_strncpy(char *dest, char *src, int n)
 			dest[a] = *src;
 		}
 	}
-	for (*dest; *dest < n; *dest++)
+	else
 	{
-		*dest = *src;
+		for (a = 0; a < n; a++)
+		{
+			dest[a] = src[a];
+		}
 	}
 	return (dest);
 }
