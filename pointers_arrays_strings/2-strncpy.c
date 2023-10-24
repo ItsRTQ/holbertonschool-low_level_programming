@@ -1,4 +1,5 @@
 #include "main.h"
+#include "2-strlen.c"
 /**
 * *_strncpy - it starts the program
 * @dest: recive a value
@@ -9,7 +10,7 @@
 */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int a;
+	int a, Size = _strlen(src);
 
 	if (src[0] == '\0')
 	{
@@ -22,7 +23,14 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		for (a = 0; a < n; a++)
 		{
-			dest[a] = src[a];
+			if (a >= Size)
+			{
+				dest[a] = '\0';
+			}
+			else
+			{
+				dest[a] = src[a];
+			}
 		}
 	}
 	return (dest);
