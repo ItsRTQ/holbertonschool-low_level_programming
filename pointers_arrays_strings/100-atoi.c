@@ -14,7 +14,7 @@ int _atoi(char *s)
 	{
 		if (s[a] >= '0' && s[a] <= '9')
 		{
-			if ((value * 10 + (s[a] - '0')) <= INT_MIN)
+			if ( value >= 214748364 && negative < 0)
 			{
 				return (-2147483648);
 			}
