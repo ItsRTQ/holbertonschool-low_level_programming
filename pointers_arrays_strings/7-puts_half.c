@@ -11,7 +11,7 @@ void puts_half(char *str)
 	int Size = _strlen(str);
 	int a;
 
-	if (Size % 2 == 1)//odd number
+	if (Size % 2 == 1)
 	{
 		Size = (Size - 1) / 2;
 		for (a = Size; str[a] != '\0'; a++)
@@ -19,7 +19,7 @@ void puts_half(char *str)
 			_putchar(str[a]);
 		}
 	}
-	else //even number
+	else
 	{
 		for (a = (Size / 2); str[a] != '\0'; a++)
 		{
