@@ -14,15 +14,23 @@ int _atoi(char *s)
 	{
 		if (s[a] >= '0' && s[a] <= '9')
 		{
-			if ( value >= 214748364 && negative < 0)
+			if (value >= 214748364 && negative < 0)
 			{
 				return (-2147483648);
 			}
 			if (s[a - 1] == '-')
 			{
-				negative = -1;
+				negative = negative * -1;
+			}
+			else if (s[a] == '+')
+			{
+				negative = negative * 1;
 			}
 			value = value * 10 + (s[a] - '0');
+			if (s[a + 1] < '0' && s[a + 1] > '9')
+			{
+				return (value * negative);
+			}
 		}
 	}
 	return (value * negative);
