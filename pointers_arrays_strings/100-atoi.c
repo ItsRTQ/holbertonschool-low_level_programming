@@ -11,7 +11,7 @@ int _atoi(char *s)
 
 	if (s == "-2147483648")
 	{
-		value = -2147483648
+		value = -2147483648;
 		return (value);
 	}
 	for (a = 0; s[a] != '\0'; a++)
