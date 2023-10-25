@@ -13,14 +13,11 @@ char *leet(char *a)
 
 	for (i = 0 ; a[i] != '\0'; i++)
 	{
-		if (a[i] != '\n')
+		for (b = 0; scanner[b] != '\0'; b++)
 		{
-			for (b = 0; scanner[b] != '\0'; b++)
+			if (scanner[b] == a[i] && a[i] != '\n')
 			{
-				if (scanner[b] == a[i])
-				{
-					a[i] = encoder[b];
-				}
+				a[i] = encoder[b];
 			}
 		}
 	}
