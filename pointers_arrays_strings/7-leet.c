@@ -7,8 +7,8 @@
 */
 char *leet(char *a)
 {
-	char scanner[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
-	char encoder[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
+	char scanner[] = "aAeEoOtTlL";
+	char encoder[] = "4433007711";
 	int i, b;
 
 	for (i = 0 ; a[i] != '\0'; i++)
@@ -18,6 +18,7 @@ char *leet(char *a)
 			if (scanner[b] == a[i] && a[i] != '\n')
 			{
 				a[i] = encoder[b];
+				break;
 			}
 		}
 	}
