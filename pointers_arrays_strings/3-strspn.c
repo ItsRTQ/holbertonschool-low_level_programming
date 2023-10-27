@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 /**
 * _strspn - it starts the program
 * @s: recive a value
