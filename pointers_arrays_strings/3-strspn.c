@@ -1,6 +1,6 @@
 #include "main.c"
 /**
-* int _strspn - it starts the program
+* _strspn - it starts the program
 * @s: recive a value
 * @accept: recive value
 * Description - gets the lenght of a prefix substring
@@ -12,9 +12,9 @@ unsigned int _strspn(char *s, char *accept)
 
 	for (a = 0; s[a] != '\0'; a++)
 	{
-		for(b = 0; accept[b] != '\0'; b++)
+		for (b = 0; accept[b] != '\0'; b++)
 		{
-			if(accept[b] == s[a])
+			if (accept[b] == s[a])
 			{
 				amount++;
 				break;
