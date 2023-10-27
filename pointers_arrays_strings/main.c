@@ -1,18 +1,18 @@
+#include "main.h"
 #include <stdio.h>
 
-char *_strchr(char *, char);
-
 /**
- * main - check the code for Holberton School students.
+ * main - check the code
  *
  * Return: Always 0.
  */
 int main(void)
 {
-	char *s = "First, solve the problem. Then, write the code.";
-	char *f;
+    char *s = "hello, world";
+    char *f = "world";
+    char *t;
 
-	f = _strchr(s, '\0');
-	printf("%s\n", (f == NULL ? "nil" : f));
-	return (0);
+    t = _strstr(s, f);
+    printf("%s\n", t);
+    return (0);
 }
