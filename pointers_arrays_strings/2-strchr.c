@@ -14,7 +14,6 @@ char *_strchr(char *s, char c)
 	int a, Size = _strlen(s);
 
 	ptr = NULL;
-	Size;
 	if (c == '\0')
 	{
 		ptr = &s[Size];
