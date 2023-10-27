@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
 * *_strchr - it starts the program
 * @s: recive a value
