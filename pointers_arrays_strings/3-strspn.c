@@ -20,6 +20,10 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 		}
+		if (amount == 0)
+		{
+			return (amount);
+		}
 	}
 	return (amount);
 }
