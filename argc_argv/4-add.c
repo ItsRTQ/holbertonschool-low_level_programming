@@ -10,9 +10,11 @@
 */
 int main(int argc, char *argv[])
 {
+	int i, b;
+	int num = 0;
+	int result = 0;
 	(void) argc;
 	(void) argv;
-	int i, result = 0, b, num = 0;
 
 	for (i = 1; i < argc; i++)
 	{
