@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdlib>
+#include <stdlib.h>
 #include <string.h>
 /**
 * string_nconcat - it starts the program
