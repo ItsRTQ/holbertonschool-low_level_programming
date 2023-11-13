@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+void freeAll(dog_t *me);
 /**
 * new_dog - it starts the program
 * @name: recive a value
@@ -17,17 +18,28 @@ dog_t *new_dog(char *name, float age, char *owner)
 	Doggy = malloc(sizeof(dog_t));
 	if (Doggy == NULL)
 	{
+		freeAll(Doggy);
 		return (NULL);
 	}
 	Doggy->name = strdup(name);
 	Doggy->owner = strdup(owner);
 	if (Doggy->name == NULL || Doggy->owner == NULL)
 	{
-		free(Doggy->name);
-		free(Doggy->owner);
-		free(Doggy);
+		freeAll(Doggy);
 		return (NULL);
 	}
 	Doggy->age = age;
 	return (Doggy);
+}
+/**
+ * freeAll - free the structure dog
+ * @me: recive the struct
+ * Description - frees everything inside the struct and the struct
+ * Return: is void, doesnt return
+ */
+void freeAll(dog_t *me)
+{
+	free(me->name);
+	free(me->owner);
+	free(me);
 }
