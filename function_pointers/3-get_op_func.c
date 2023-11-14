@@ -1,5 +1,6 @@
-#include "calc.h"
+#include "3-calc.h"
 #include <stdlib.h>
+#include <string.h>
 /**
 * get_op_func - compares a value
 * @s: operator to use
@@ -20,7 +21,7 @@ int (*get_op_func(char *s))(int, int)
 
 	while (ops[i].op != NULL)
 	{
-		if (ops[i].op == s)
+		if (strcmp(ops[i].op, s) == 0)
 		{
 			return (ops[i].f);
 		}
