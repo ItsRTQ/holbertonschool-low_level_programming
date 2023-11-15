@@ -32,11 +32,11 @@ char *commaChecker(const char * const word, int n)
  */
 char *nulVerify(char *src)
 {
-	char *new;
+	char *new = malloc(sizeof(char) * 10);
 
 	if (src == NULL)
 	{
-		new = strdup("(nil)");
+		new = strcpy(new, "(nil)");
 		return (new);
 	}
 	return (src);
