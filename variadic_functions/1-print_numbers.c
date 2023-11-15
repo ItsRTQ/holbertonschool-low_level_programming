@@ -29,5 +29,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			printf("%s", (separator == NULL) ? "" : separator);
 		}
 	}
+	va_end(args);
 	printf("\n");
 }
