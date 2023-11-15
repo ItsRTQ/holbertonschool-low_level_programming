@@ -32,12 +32,9 @@ char *commaChecker(const char * const word, int n)
  */
 char *nulVerify(char *src)
 {
-	char *new = malloc(sizeof(char) * 10);
-
 	if (src == NULL)
 	{
-		new = strcpy(new, "(nil)");
-		return (new);
+		return ("(nil)");
 	}
 	return (src);
 }
@@ -51,7 +48,7 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	int i = 0;
-	char *str, *toFree;
+	char *str;
 
 	if (format != NULL)
 	{
@@ -70,10 +67,8 @@ void print_all(const char * const format, ...)
 						printf("%f%s", va_arg(args, double), commaChecker(format, i));
 						break;
 				case 's':
-						str = va_arg(args, char*);
-						toFree = nulVerify(str);
-						printf("%s%s", toFree, commaChecker(format, i));
-						free(toFree);
+						str = nulVerify(va_arg(args, char*));
+						printf("%s%s", str, commaChecker(format, i));
 						break;
 				default:
 						break;
