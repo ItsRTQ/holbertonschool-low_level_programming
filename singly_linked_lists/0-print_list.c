@@ -10,9 +10,9 @@
 size_t print_list(const list_t *h)
 {
 	size_t i = 0;
-	list_t *currentNode = &h;
+	const list_t *currentNode = h;
 
-	for (currentNode = &h; currentNode != NULL; currentNode = currentNode->next)
+	for (; currentNode != NULL; currentNode = currentNode->next)
 	{
 		printf("[%u] ", (currentNode->str == NULL) ? 0 : currentNode->len);
 		printf("%s\n", (currentNode->str == NULL) ? "(nil)" : currentNode->str);
