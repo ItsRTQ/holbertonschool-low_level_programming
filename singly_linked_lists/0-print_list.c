@@ -1,5 +1,5 @@
 #include "lists.h"
-#include <stdlib>
+#include <stdlib.h>
 #include <stdio.h>
 /**
 * print_list - prints a link list value
