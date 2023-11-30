@@ -14,5 +14,5 @@ void print_binary(unsigned long int n)
 		print_binary(n >> 1);
 	}
 	bits = (n & 1);
-	printf("%c", (bits + '0'));
+	putchar(bits + '0');
 }
