@@ -17,7 +17,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	file_des = open(filename, O_RDONLY);
 	if (file_des == -1)
-		return (amount);
+		return (0);
 	while (amount > 0 && letters > 0)
 	{
 		amount = read(file_des, buffer, sizeof(letters));
