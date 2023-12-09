@@ -1,5 +1,6 @@
 #include "main.h"
 void errorCall(char *filename);
+void errorCallRead(char *filename);
 /**
 * main - copies one file to another file
 * @argc: amount of arguments
@@ -20,15 +21,14 @@ int main(int argc, char *argv[])
 	}
 	output = open(argv[1], O_RDONLY);/*opens the file to copy from*/
 	if (output == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
+		errorCallRead(argv[1]);
 	input = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);/*opens files copy*/
 	if (input == -1)
 		errorCall(argv[2]);
 	while ((checks = read(output, buffer, sizeof(buffer))) > 0)
 	{
+		if (checks == -1)
+			errorCallRead(argv[1]);
 		safeguard = write(input, buffer, checks);
 		if (safeguard == -1)
 			errorCall(argv[2]);
@@ -55,4 +55,15 @@ void errorCall(char *filename)
 {
 	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
 	exit(99);
+}
+/**
+ * errorCallRead - call when reading fails
+ * @filename: filepath for error msg
+ *
+ * Return: void, doesnt return
+ */
+void errorCallRead(char *filename)
+{
+	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
+	exit(98);
 }
