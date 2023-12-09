@@ -1,5 +1,5 @@
 #include "main.h"
-void errorCode(char *filename);
+void errorCall(char *filename);
 /**
 * main - copies one file to another file
 * @argc: amount of arguments
