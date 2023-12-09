@@ -25,8 +25,9 @@ int main(int argc, char *argv[])
 	input = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);/*opens files copy*/
 	if (input == -1)
 		errorCall(argv[2]);
-	while ((checks = read(output, buffer, sizeof(buffer))) > 0)
+	while (checks > 0)
 	{
+		checks = read(output, buffer, sizeof(buffer));
 		if (checks == -1)
 			errorCallRead(argv[1]);
 		safeguard = write(input, buffer, checks);
