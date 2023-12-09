@@ -57,7 +57,7 @@ void errorCall(char *filename)
 	exit(99);
 }
 /**
- * errorCallRead - call when reading fails
+ * errorCallRead - call when error 98 occures
  * @filename: filepath for error msg
  *
  * Return: void, doesnt return
