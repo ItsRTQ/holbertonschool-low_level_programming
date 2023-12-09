@@ -15,13 +15,13 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(2, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	output = open(argv[1], O_RDONLY);/*opens the file to copy from*/
 	if (output == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	input = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);/*opens files copy*/
@@ -35,12 +35,12 @@ int main(int argc, char *argv[])
 	}
 	if (close(input) == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", input);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", input);
 		exit(100);
 	}
 	if (close(output) == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", output);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", output);
 		exit(100);
 	}
 	return (0);
@@ -53,6 +53,6 @@ int main(int argc, char *argv[])
 */
 void errorCall(char *filename)
 {
-	dprintf(2, "Error: Can't write to %s\n", filename);
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
 	exit(99);
 }
