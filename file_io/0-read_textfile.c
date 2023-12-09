@@ -22,7 +22,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		amount = read(file_des, buffer, sizeof(letters));
 		readed = (amount > letters) ? letters : amount;
-		bytes = write(1, buffer, readed);
+		bytes = write(STDOUT_FILENO, buffer, readed);
 		if (bytes == -1)
 			return (0);
 		total += bytes;
