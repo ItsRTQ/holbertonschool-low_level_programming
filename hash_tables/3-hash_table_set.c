@@ -1,4 +1,5 @@
 #include "hash_tables.h"
+int scan(hash_table_t *ht, const char *k, const char *v, unsigned long int i);
 /**
 * hash_table_set - adds element to hash table
 * @ht: the has table to add to
@@ -15,6 +16,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht == NULL || key == NULL || value == NULL || key[0] == '\0')
 		return (0);
 	index = key_index((unsigned char *)key, ht->size);
+	if (scan(ht, key, value, index))
+		return (1);
 	new_element = malloc(sizeof(hash_node_t));
 	if (new_element == NULL)
 		return (0);
@@ -42,4 +45,28 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	else
 		ht->array[index] = new_element;
 	return (1);
+}
+/**
+ * scan - change only the value if element exist
+ * @ht: table to check
+ * @k: key to do comparation
+ * @v: to change the value
+ * @i: index to verify
+ *
+ * Return: 0 if doesnt exist 1 if it does
+ */
+int scan(hash_table_t *ht, const char *k, const char *v, unsigned long int i)
+{
+	hash_node_t *currentNode = ht->array[i];
+
+	while (currentNode != NULL)
+	{
+		if (strcmp(currentNode->key, k) == 0)
+		{
+			strcpy(currentNode->value, v);
+			return (1);
+		}
+		currentNode = currentNode->next;
+	}
+	return (0);
 }
