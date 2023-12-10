@@ -21,13 +21,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_element = malloc(sizeof(hash_node_t));
 	if (new_element == NULL)
 		return (0);
-	new_element->key = malloc(sizeof(char) * strlen(key));
+	new_element->key = malloc(sizeof(char) * (strlen(key) + 1));
 	if (new_element->key == NULL)
 	{
 		free(new_element);
 		return (0);
 	}
-	new_element->value = malloc(sizeof(char) * strlen(value));
+	new_element->value = malloc(sizeof(char) * (strlen(value) + 1));
 	if (new_element->value == NULL)
 	{
 		free(new_element->key);
@@ -63,7 +63,10 @@ int scan(hash_table_t *ht, const char *k, const char *v, unsigned long int i)
 	{
 		if (strcmp(currentNode->key, k) == 0)
 		{
-			strcpy(currentNode->value, v);
+			free(currentNode->value);
+			currentNode->value = strdup(v);
+			if (currentNode->value == NULL)
+				return (0);
 			return (1);
 		}
 		currentNode = currentNode->next;
